@@ -1,11 +1,12 @@
 var fetchUrl = require("fetch").fetchUrl;
 
-console.log("Started");
-
 const minutes = 10;
+const target = "http://mhall.xyz";
 
+
+console.log("Started");
 setInterval(function(){
-fetchUrl("http://mhall.xyz", function(error, meta, body){
+fetchUrl(target, function(error, meta, body){
     console.log(body.toString());
 });
 }, minutes * 60 * 1000);
